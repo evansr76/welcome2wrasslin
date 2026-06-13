@@ -33,7 +33,6 @@
     overflow-x: hidden;
   }
 
-  /* ── NAV ── */
   nav {
     position: sticky;
     top: 0;
@@ -45,7 +44,6 @@
     justify-content: space-between;
     padding: 0 2rem;
     height: 58px;
-    backdrop-filter: blur(8px);
   }
 
   .nav-logo {
@@ -56,7 +54,7 @@
   }
 
   .nav-logo img {
-    height: 38px;
+    height: 42px;
     width: auto;
     object-fit: contain;
   }
@@ -95,9 +93,7 @@
     padding: 7px 18px !important;
     border-radius: 3px;
   }
-  .nav-subscribe:hover { opacity: 0.88; }
 
-  /* ── HERO ── */
   .hero {
     position: relative;
     min-height: 100vh;
@@ -106,11 +102,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 5rem 2rem 5rem;
+    padding: 5rem 2rem;
     overflow: hidden;
   }
 
-  /* Radial spotlight glow matching logo colours */
   .hero::before {
     content: '';
     position: absolute;
@@ -118,22 +113,17 @@
     background:
       radial-gradient(ellipse 70% 55% at 50% 42%, rgba(212,160,23,0.11) 0%, transparent 65%),
       radial-gradient(ellipse 50% 30% at 25% 55%, rgba(255,220,100,0.05) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 30% at 75% 55%, rgba(255,220,100,0.05) 0%, transparent 55%),
-      radial-gradient(ellipse 80% 40% at 50% 95%, rgba(192,17,43,0.06) 0%, transparent 70%);
+      radial-gradient(ellipse 50% 30% at 75% 55%, rgba(255,220,100,0.05) 0%, transparent 55%);
     pointer-events: none;
   }
 
-  /* Subtle diagonal texture */
   .hero::after {
     content: '';
     position: absolute;
     inset: 0;
     background-image: repeating-linear-gradient(
-      -55deg,
-      transparent,
-      transparent 80px,
-      rgba(212,160,23,0.018) 80px,
-      rgba(212,160,23,0.018) 81px
+      -55deg, transparent, transparent 80px,
+      rgba(212,160,23,0.018) 80px, rgba(212,160,23,0.018) 81px
     );
     pointer-events: none;
   }
@@ -147,15 +137,12 @@
     max-width: 860px;
   }
 
-  /* The logo — give it room to breathe and let it be the centerpiece */
   .hero-logo {
     width: min(560px, 88vw);
     height: auto;
     display: block;
-    margin-bottom: 1rem;
-    /* Preserve the black bg of the PNG by blending — this makes it float */
-    mix-blend-mode: screen;
-    filter: drop-shadow(0 0 60px rgba(212,160,23,0.25)) drop-shadow(0 0 120px rgba(212,160,23,0.1));
+    margin-bottom: 1.25rem;
+    filter: drop-shadow(0 0 40px rgba(212,160,23,0.3)) drop-shadow(0 0 80px rgba(212,160,23,0.12));
   }
 
   .hero-sub {
@@ -204,9 +191,9 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-decoration: none;
-    transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s;
   }
-  .btn-secondary:hover { background: rgba(212,160,23,0.07); border-color: var(--gold); }
+  .btn-secondary:hover { background: rgba(212,160,23,0.07); }
 
   .ep-badge {
     display: inline-flex;
@@ -221,12 +208,9 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gold-dark);
+    color: var(--gold);
   }
 
-  .ep-badge span { color: var(--gold); }
-
-  /* Scroll nudge */
   .hero-scroll {
     position: absolute;
     bottom: 2rem;
@@ -253,19 +237,14 @@
     animation: pulse 2.2s ease-in-out infinite;
   }
 
-  @keyframes pulse {
-    0%, 100% { opacity: 0.35; }
-    50% { opacity: 1; }
-  }
+  @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
 
-  /* ── GOLD DIVIDER ── */
   .gold-divider {
     border: none;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
   }
 
-  /* ── SECTION COMMON ── */
   section { padding: 5rem 2rem; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
 
@@ -281,13 +260,7 @@
     align-items: center;
     gap: 10px;
   }
-
-  .section-label::after {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--gold-dark);
-  }
+  .section-label::after { content: ''; width: 40px; height: 1px; background: var(--gold-dark); }
 
   .section-title {
     font-family: 'Bebas Neue', sans-serif;
@@ -304,7 +277,6 @@
     font-size: 15px;
   }
 
-  /* ── SHOWS ── */
   #shows { background: var(--dark2); }
 
   .shows-grid {
@@ -324,7 +296,6 @@
     color: inherit;
     display: block;
   }
-
   .show-card:hover { border-bottom-color: var(--gold); background: #191919; }
   .show-card.red:hover { border-bottom-color: var(--red); }
 
@@ -334,32 +305,20 @@
     line-height: 1;
     color: rgba(212,160,23,0.06);
     position: absolute;
-    top: 1rem;
-    right: 1.75rem;
-    letter-spacing: 2px;
+    top: 1rem; right: 1.75rem;
     pointer-events: none;
   }
 
-  .show-icon {
-    font-size: 28px;
-    margin-bottom: 1rem;
-    display: block;
-  }
+  .show-icon { font-size: 28px; margin-bottom: 1rem; display: block; }
 
   .show-card h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 26px;
     letter-spacing: 1.5px;
     margin-bottom: 0.75rem;
-    color: var(--text);
   }
 
-  .show-card p {
-    color: var(--text-muted);
-    font-size: 15px;
-    line-height: 1.65;
-    margin-bottom: 1.5rem;
-  }
+  .show-card p { color: var(--text-muted); font-size: 15px; line-height: 1.65; margin-bottom: 1.5rem; }
 
   .show-link {
     font-family: 'Barlow Condensed', sans-serif;
@@ -371,8 +330,8 @@
   }
   .show-card.red .show-link { color: #e87a88; }
 
-  /* ── VIDEOS ── */
   #latest { background: var(--dark); }
+  #popular { background: var(--dark2); }
   #marietta { background: var(--dark2); }
 
   .video-grid {
@@ -388,18 +347,13 @@
     border: 1px solid rgba(255,255,255,0.04);
     transition: transform 0.2s, border-color 0.2s;
   }
-
-  .video-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(212,160,23,0.28);
-  }
+  .video-card:hover { transform: translateY(-3px); border-color: rgba(212,160,23,0.28); }
 
   .video-thumb-wrap {
     position: relative;
     padding-bottom: 56.25%;
     background: #111;
   }
-
   .video-thumb-wrap iframe {
     position: absolute;
     inset: 0;
@@ -420,19 +374,10 @@
     margin-bottom: 3px;
   }
 
-  .video-title {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.45;
-    color: var(--text);
-  }
+  .video-title { font-size: 14px; font-weight: 500; line-height: 1.45; color: var(--text); }
 
-  .view-all-wrap {
-    margin-top: 2.25rem;
-    text-align: center;
-  }
+  .view-all-wrap { margin-top: 2.25rem; text-align: center; }
 
-  /* ── HOSTS ── */
   #hosts { background: var(--dark); }
 
   .hosts-grid {
@@ -449,7 +394,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .host-card::after {
     content: '';
     position: absolute;
@@ -459,13 +403,10 @@
   }
 
   .host-avatar {
-    width: 56px;
-    height: 56px;
+    width: 56px; height: 56px;
     border-radius: 50%;
     background: var(--gold-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 22px;
     color: var(--dark);
@@ -475,56 +416,31 @@
 
   .host-handle {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold-dark);
-    margin-bottom: 0.2rem;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold-dark); margin-bottom: 0.2rem;
   }
 
   .host-card h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    line-height: 1;
+    font-size: 30px; letter-spacing: 2px;
+    margin-bottom: 1rem; line-height: 1;
   }
 
-  .host-card p {
-    color: var(--text-muted);
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-  }
+  .host-card p { color: var(--text-muted); font-size: 15px; line-height: 1.7; margin-bottom: 1.5rem; }
 
-  .rushmore {
-    border-top: 1px solid var(--border);
-    padding-top: 1.25rem;
-  }
+  .rushmore { border-top: 1px solid var(--border); padding-top: 1.25rem; }
 
   .rushmore-label {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: rgba(154,149,144,0.6);
-    margin-bottom: 0.4rem;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: rgba(154,149,144,0.6); margin-bottom: 0.4rem;
   }
 
-  .rushmore-names {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.9;
-  }
+  .rushmore-names { font-size: 14px; color: var(--text-muted); line-height: 1.9; }
+  .rushmore-names strong { color: var(--text); font-weight: 500; }
 
-  .rushmore-names strong {
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  /* ── ORIGIN BAND ── */
   .origin-band {
     background: var(--dark2);
     border-top: 1px solid var(--border);
@@ -532,93 +448,56 @@
     padding: 4.5rem 2rem;
     text-align: center;
   }
-
   .origin-inner { max-width: 620px; margin: 0 auto; }
 
   .origin-eyebrow {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.25rem;
+    display: flex; align-items: center; justify-content: center; gap: 12px;
   }
-
-  .origin-eyebrow::before,
-  .origin-eyebrow::after {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--gold-dark);
+  .origin-eyebrow::before, .origin-eyebrow::after {
+    content: ''; width: 40px; height: 1px; background: var(--gold-dark);
   }
 
   .origin-quote {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(26px, 4.5vw, 42px);
-    letter-spacing: 1.5px;
-    color: var(--text);
-    line-height: 1.25;
-    margin-bottom: 1rem;
+    letter-spacing: 1.5px; color: var(--text);
+    line-height: 1.25; margin-bottom: 1rem;
   }
-
   .origin-quote em { color: var(--gold); font-style: normal; }
+  .origin-body { color: var(--text-muted); font-size: 16px; line-height: 1.8; }
 
-  .origin-body {
-    color: var(--text-muted);
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  /* ── FOLLOW ── */
-  #follow {
-    background: var(--dark);
-    text-align: center;
-    padding: 5rem 2rem;
-  }
-
+  #follow { background: var(--dark); text-align: center; padding: 5rem 2rem; }
   .follow-inner { max-width: 580px; margin: 0 auto; }
   .follow-inner .section-label { justify-content: center; }
   .follow-inner .section-label::after { display: none; }
 
   .social-row {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 2.5rem;
+    display: flex; justify-content: center;
+    gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem;
   }
 
   .social-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    padding: 12px 24px;
-    border-radius: 3px;
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 12px 24px; border-radius: 3px;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
     text-decoration: none;
     transition: transform 0.15s, opacity 0.2s;
   }
   .social-btn:hover { transform: translateY(-2px); opacity: 0.88; }
-
   .social-btn.yt { background: #FF0000; color: #fff; }
   .social-btn.fb { background: #1877F2; color: #fff; }
   .social-btn.outline {
     border: 1px solid rgba(212,160,23,0.4);
-    color: var(--gold);
-    background: transparent;
+    color: var(--gold); background: transparent;
   }
   .social-btn.outline:hover { opacity: 1; background: rgba(212,160,23,0.07); }
 
-  /* ── FOOTER ── */
   footer {
     background: #000;
     border-top: 1px solid var(--border);
@@ -626,32 +505,15 @@
     text-align: center;
   }
 
-  .footer-logo-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.75rem;
-  }
-
+  .footer-logo-wrap { display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; }
   .footer-logo-wrap img {
-    height: 52px;
-    mix-blend-mode: screen;
+    height: 60px;
     filter: drop-shadow(0 0 20px rgba(212,160,23,0.2));
   }
 
-  footer p {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 0.25rem;
-  }
+  footer p { font-size: 13px; color: var(--text-muted); margin-bottom: 0.25rem; }
+  footer .fine { font-size: 12px; color: rgba(154,149,144,0.4); margin-top: 0.5rem; }
 
-  footer .fine {
-    font-size: 12px;
-    color: rgba(154,149,144,0.4);
-    margin-top: 0.5rem;
-  }
-
-  /* ── MOBILE ── */
   @media (max-width: 660px) {
     nav { padding: 0 1rem; }
     .nav-links { gap: 1rem; }
@@ -671,7 +533,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
     <img src="w2w-logo.png" alt="Welcome 2 Wrasslin">
@@ -685,20 +546,15 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <img
-      src="w2w-logo.png"
-      alt="Welcome 2 Wrasslin — The Podcast"
-      class="hero-logo"
-    >
+    <img src="w2w-logo.png" alt="Welcome 2 Wrasslin — The Podcast" class="hero-logo">
     <p class="hero-sub">Two lifelong wrestling fans, one podcast. Big E and The P.O.T. break down everything happening in the wild world of WWE — multiple times a week.</p>
     <div class="hero-ctas">
       <a href="#latest" class="btn-primary">▶ Watch Latest Episode</a>
       <a href="#shows" class="btn-secondary">Explore Shows</a>
     </div>
-    <div class="ep-badge"><span>🏆</span> 70+ Episodes &amp; Counting</div>
+    <div class="ep-badge">🏆 70+ Episodes &amp; Counting</div>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -708,7 +564,6 @@
 
 <hr class="gold-divider">
 
-<!-- SHOWS -->
 <section id="shows">
   <div class="section-inner">
     <div class="section-label">The Shows</div>
@@ -735,52 +590,56 @@
 
 <hr class="gold-divider">
 
-<!-- LATEST EPISODES -->
+<!-- LATEST EPISODES — real video IDs -->
 <section id="latest">
   <div class="section-inner">
     <div class="section-label">Fresh Off the Mic</div>
     <h2 class="section-title">Latest Episodes</h2>
     <p class="section-desc">New episodes drop multiple times a week. Catch up on the most recent ones right here.</p>
     <div class="video-grid">
+
       <div class="video-card">
         <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed/pIfKp6xTddw"
-            title="Ep 71 – Backlash Preview & Hulk Hogan Doc"
+          <iframe src="https://www.youtube.com/embed/Q9gv8oa4WCc"
+            title="Latest Episode"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <div class="video-ep">Ep. 71</div>
-          <div class="video-title">Backlash Preview &amp; Hulk Hogan Netflix Doc</div>
+          <div class="video-ep">Latest Episode</div>
+          <div class="video-title">Newest Drop from Dem Wrasslin Boyz</div>
         </div>
       </div>
+
       <div class="video-card">
         <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=Welcome2wrasslin&index=1"
-            title="Ep 72 – HBK Doc Review & Backlash Preview"
+          <iframe src="https://www.youtube.com/embed/K_SbmMOI42s"
+            title="Recent Episode"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <div class="video-ep">Ep. 72</div>
-          <div class="video-title">HBK Doc Review &amp; Backlash Preview</div>
+          <div class="video-ep">Recent Episode</div>
+          <div class="video-title">Welcome 2 Wrasslin Podcast</div>
         </div>
       </div>
+
       <div class="video-card">
         <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed/videoseries?list=UCGINH-DM9Psuj0aTRsFhJZg"
-            title="Ep 70 – WrestleMania 42 Review"
+          <iframe src="https://www.youtube.com/embed/8b02RkQ6LpI"
+            title="Recent Episode"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <div class="video-ep">Ep. 70</div>
-          <div class="video-title">WrestleMania 42 Full Review</div>
+          <div class="video-ep">Recent Episode</div>
+          <div class="video-title">Welcome 2 Wrasslin Podcast</div>
         </div>
       </div>
+
     </div>
     <div class="view-all-wrap">
       <a href="https://www.youtube.com/@Welcome2wrasslin" target="_blank" rel="noopener" class="btn-primary">View All Episodes on YouTube ↗</a>
@@ -790,8 +649,64 @@
 
 <hr class="gold-divider">
 
+<!-- MOST POPULAR -->
+<section id="popular">
+  <div class="section-inner">
+    <div class="section-label">Fan Favorites</div>
+    <h2 class="section-title">Most Watched</h2>
+    <p class="section-desc">The episodes that got Dem Wrasslin Boyz's fans talking the most.</p>
+    <div class="video-grid">
+
+      <div class="video-card">
+        <div class="video-thumb-wrap">
+          <iframe src="https://www.youtube.com/embed/npru9ohuowE"
+            title="Most Popular Episode"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-ep">Most Watched</div>
+          <div class="video-title">Welcome 2 Wrasslin Podcast</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumb-wrap">
+          <iframe src="https://www.youtube.com/embed/NYvqjdsSN1k"
+            title="2nd Most Popular"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-ep">Fan Favorite</div>
+          <div class="video-title">Welcome 2 Wrasslin Podcast</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumb-wrap">
+          <iframe src="https://www.youtube.com/embed/I2CsdOlgOWc"
+            title="3rd Most Popular"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-ep">Fan Favorite</div>
+          <div class="video-title">Welcome 2 Wrasslin Podcast</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider">
+
 <!-- MARIETTA LEGENDS -->
-<section id="marietta">
+<section id="marietta" style="background: var(--dark);">
   <div class="section-inner">
     <div class="section-label">Marietta Legends</div>
     <h2 class="section-title">Beyond the Ring</h2>
@@ -799,7 +714,7 @@
     <div class="video-grid">
       <div class="video-card">
         <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed/pIfKp6xTddw?si=4giKLzESe9iivRjP"
+          <iframe src="https://www.youtube.com/embed/pIfKp6xTddw"
             title="Welcome 2 Wrasslin – Episode 1"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -808,19 +723,6 @@
         <div class="video-info">
           <div class="video-ep" style="color:#e87a88;">Where It All Started</div>
           <div class="video-title">Ep. 1 — Meet Dem Wrasslin Boyz</div>
-        </div>
-      </div>
-      <div class="video-card">
-        <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed/videoseries?list=UCGINH-DM9Psuj0aTRsFhJZg&index=5"
-            title="Coach Ted Gatewood Interview"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <div class="video-info">
-          <div class="video-ep" style="color:#e87a88;">Marietta Legends</div>
-          <div class="video-title">Coach Ted Gatewood — His Story &amp; Legacy</div>
         </div>
       </div>
     </div>
@@ -866,18 +768,14 @@
   </div>
 </section>
 
-<!-- ORIGIN BAND -->
 <div class="origin-band">
   <div class="origin-inner">
     <div class="origin-eyebrow">Their Origin Story</div>
     <p class="origin-quote">6th grade. Gym class.<br><em>A Sting T-shirt.</em></p>
-    <p class="origin-body">
-      Dem Wrasslin Boyz met at Marietta Junior High. The P.O.T. spotted Big E rocking a Sting shirt — Sting had just won the world title in 1990 — and knew immediately he was talking to a fellow fan. A bond over wrestling that neither could form with anyone else. Thirty-something years later, they're still at it. On mic.
-    </p>
+    <p class="origin-body">Dem Wrasslin Boyz met at Marietta Junior High. The P.O.T. spotted Big E rocking a Sting shirt — Sting had just won the world title in 1990 — and knew immediately he was talking to a fellow fan. A bond over wrestling that neither could form with anyone else. Thirty-something years later, they're still at it. On mic.</p>
   </div>
 </div>
 
-<!-- FOLLOW -->
 <section id="follow">
   <div class="follow-inner">
     <div class="section-label">Stay Connected</div>
@@ -891,7 +789,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo-wrap">
     <img src="w2w-logo.png" alt="Welcome 2 Wrasslin logo">
