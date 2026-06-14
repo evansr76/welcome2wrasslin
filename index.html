@@ -765,19 +765,30 @@
     .shows-grid, .hosts-grid { grid-template-columns: 1fr; }
     .video-grid { grid-template-columns: 1fr; }
 
-    /* Hero mobile — stack image above, text below */
-    .hero { display: block; }
+    /* Hero mobile — image with text overlapping bottom */
+    .hero { display: flex; flex-direction: column; }
     .hero-image {
       max-height: none;
       width: 100%;
       display: block;
+      margin-bottom: -80px;
     }
-    .hero-fade { display: none; }
+    .hero-fade {
+      display: block;
+      height: 180px;
+      background: linear-gradient(to top,
+        rgba(10,10,10,1) 0%,
+        rgba(10,10,10,0.98) 40%,
+        rgba(10,10,10,0.7) 70%,
+        transparent 100%
+      );
+    }
     .hero-content {
       position: static;
-      padding: 1.5rem 1.25rem 2rem;
+      padding: 0 1.25rem 2rem;
       background: var(--dark);
       text-align: center;
+      margin-top: 0;
     }
     .hero-sub {
       font-size: 15px;
