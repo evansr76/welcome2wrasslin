@@ -625,23 +625,18 @@
     pointer-events: none;
   }
 
-  .host-card { min-height: 480px; }
-
-  .host-bg {
-    position: absolute;
-    inset: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    mix-blend-mode: screen;
-    opacity: 0.9;
-    transition: opacity 0.3s, transform 0.3s;
-    pointer-events: none;
+  .host-avatar {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: var(--dark);
+    margin-bottom: 1.25rem;
+    letter-spacing: 1px;
+    box-shadow: 0 0 0 3px rgba(212,160,23,0.15), 0 0 20px rgba(212,160,23,0.2);
   }
-
-  .host-card:hover .host-bg { opacity: 1; transform: scale(1.02); }
-
-  .host-content { position: relative; z-index: 2; }
 
   .host-handle {
     font-family: 'Barlow Condensed', sans-serif;
@@ -1049,33 +1044,29 @@
     <div class="hosts-grid">
       <div class="host-card">
         <div class="host-card-glow"></div>
-        <div class="host-bg" style="background-image: url('pot.png');"></div>
-        <div class="host-content">
-          <div class="host-handle">Co-Host</div>
-          <h3>The P.O.T.</h3>
-          <p>Originally from Toledo, Ohio, The P.O.T. moved to Marietta around age 4 and became a wrestling fan the moment he saw "Nature Boy" Ric Flair on screen. Having to sneak around just to watch it only made him love wrasslin more — and that passion sparked Welcome 2 Wrasslin.</p>
-          <div class="rushmore">
-            <div class="rushmore-label">Mount Rushmore</div>
-            <div class="rushmore-names">
-              <strong>"Nature Boy" Ric Flair</strong> · <strong>Hulk Hogan</strong><br>
-              <strong>Stone Cold Steve Austin</strong> · <strong>The Rock</strong>
-            </div>
+        <div class="host-avatar">TP</div>
+        <div class="host-handle">Co-Host</div>
+        <h3>The P.O.T.</h3>
+        <p>Originally from Toledo, Ohio, The P.O.T. moved to Marietta around age 4 and became a wrestling fan the moment he saw "Nature Boy" Ric Flair on screen. Having to sneak around just to watch it only made him love wrasslin more — and that passion sparked Welcome 2 Wrasslin.</p>
+        <div class="rushmore">
+          <div class="rushmore-label">Mount Rushmore</div>
+          <div class="rushmore-names">
+            <strong>"Nature Boy" Ric Flair</strong> · <strong>Hulk Hogan</strong><br>
+            <strong>Stone Cold Steve Austin</strong> · <strong>The Rock</strong>
           </div>
         </div>
       </div>
       <div class="host-card">
         <div class="host-card-glow"></div>
-        <div class="host-bg" style="background-image: url('bige.png');"></div>
-        <div class="host-content">
-          <div class="host-handle">Co-Host</div>
-          <h3>Big E</h3>
-          <p>Born and raised on the South side of Marietta, Big E was about 5 when he fell in love with wrestling — styling his hair like Ricky Morton and watching NWA every Friday night from 8pm to 1am. He handles all the editing and media production, and is undefeated wrestling his pillows.</p>
-          <div class="rushmore">
-            <div class="rushmore-label">Mount Rushmore</div>
-            <div class="rushmore-names">
-              <strong>Hulk Hogan</strong> · <strong>"Nature Boy" Ric Flair</strong><br>
-              <strong>Stone Cold Steve Austin</strong> · <strong>Shawn Michaels (HBK)</strong>
-            </div>
+        <div class="host-avatar">BE</div>
+        <div class="host-handle">Co-Host</div>
+        <h3>Big E</h3>
+        <p>Born and raised on the South side of Marietta, Big E was about 5 when he fell in love with wrestling — styling his hair like Ricky Morton and watching NWA every Friday night from 8pm to 1am. He handles all the editing and media production, and is undefeated wrestling his pillows.</p>
+        <div class="rushmore">
+          <div class="rushmore-label">Mount Rushmore</div>
+          <div class="rushmore-names">
+            <strong>Hulk Hogan</strong> · <strong>"Nature Boy" Ric Flair</strong><br>
+            <strong>Stone Cold Steve Austin</strong> · <strong>Shawn Michaels (HBK)</strong>
           </div>
         </div>
       </div>
