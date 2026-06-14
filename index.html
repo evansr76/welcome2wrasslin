@@ -761,11 +761,43 @@
     .nav-links li:nth-child(1),
     .nav-links li:nth-child(2),
     .nav-links li:nth-child(3) { display: none; }
-    .hero-logo { width: 90vw; }
-    .hero-sub { font-size: 16px; }
     section { padding: 3.5rem 1rem; }
     .shows-grid, .hosts-grid { grid-template-columns: 1fr; }
     .video-grid { grid-template-columns: 1fr; }
+
+    /* Hero mobile fixes */
+    .hero-image {
+      max-height: 60vw;
+      object-position: center center;
+    }
+    .hero-fade {
+      height: 70%;
+      background: linear-gradient(to top,
+        rgba(10,10,10,1) 0%,
+        rgba(10,10,10,0.95) 45%,
+        rgba(10,10,10,0.5) 75%,
+        transparent 100%
+      );
+    }
+    .hero-content {
+      padding: 0 1.25rem 1.75rem;
+    }
+    .hero-sub {
+      font-size: 14px;
+      margin-bottom: 1rem;
+    }
+    .hero-ctas {
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .btn-primary, .btn-secondary {
+      padding: 11px 20px;
+      font-size: 13px;
+    }
+    .ep-badge {
+      font-size: 11px;
+      padding: 4px 10px;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
