@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome 2 Wrasslin — The Podcast</title>
+<meta name="description" content="Two lifelong wrestling fans, one podcast. Big E and The P.O.T. break down everything happening in the world of professional wrestling — multiple times a week.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Welcome 2 Wrasslin — The Podcast">
+<meta property="og:description" content="Two lifelong wrestling fans, one podcast. Big E and The P.O.T. break down everything happening in professional wrestling — multiple times a week.">
+<meta property="og:image" content="w2w-hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Welcome 2 Wrasslin — The Podcast">
+<meta name="twitter:description" content="Two lifelong wrestling fans, one podcast. New episodes multiple times a week.">
+<meta name="twitter:image" content="w2w-hero.png">
+<link rel="icon" type="image/png" href="w2w-logo.png">
+<link rel="apple-touch-icon" href="w2w-logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,7 +49,9 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(10,10,10,0.96);
+    background: rgba(10,10,10,0.92);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
@@ -92,6 +106,81 @@
     color: #fff !important;
     padding: 7px 18px !important;
     border-radius: 3px;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s !important;
+  }
+  .nav-subscribe:hover {
+    background: #e0152f !important;
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(192,17,43,0.5);
+    transform: translateY(-1px);
+  }
+
+  /* ── HAMBURGER ── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 4px;
+    z-index: 102;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 1px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 58px;
+    left: 0; right: 0;
+    background: rgba(8,8,8,0.97);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    z-index: 99;
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul { list-style: none; padding: 0.5rem 0 1rem; }
+  .mobile-menu li { border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .mobile-menu li:last-child { border-bottom: none; padding-top: 0.25rem; }
+  .mobile-link {
+    display: block;
+    padding: 0.85rem 1.75rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s, padding-left 0.2s;
+  }
+  .mobile-link:hover { color: var(--gold); padding-left: 2.25rem; }
+  .mobile-subscribe {
+    display: inline-flex;
+    margin: 0 1.75rem;
+    padding: 10px 22px;
+    background: var(--red);
+    color: #fff;
+    border-radius: 3px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
   .hero {
@@ -148,9 +237,11 @@
     font-size: clamp(15px, 1.8vw, 20px);
     font-weight: 600;
     color: var(--text);
+    width: 100%;
     max-width: 680px;
     margin: 0 auto 1.5rem;
     line-height: 1.5;
+    text-align: center;
     text-shadow: 0 2px 12px rgba(0,0,0,0.9);
   }
 
@@ -209,7 +300,6 @@
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.25s;
-    /* gradient border via box-shadow layering */
     box-shadow: 0 0 0 1px rgba(212,160,23,0.4), inset 0 1px 0 rgba(212,160,23,0.1);
   }
   .btn-secondary::before {
@@ -344,7 +434,6 @@
   .show-card:hover .show-card-overlay { background: linear-gradient(135deg, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0.45) 100%); }
   .show-card.red:hover { border-bottom-color: var(--red); }
 
-  /* Corner accent glow on hover */
   .show-card::after {
     content: '';
     position: absolute;
@@ -433,7 +522,6 @@
     position: relative;
   }
 
-  /* Gradient border glow on hover */
   .video-card::before {
     content: '';
     position: absolute;
@@ -502,7 +590,6 @@
     padding: 2.25rem;
     position: relative;
     overflow: hidden;
-    /* Gradient border */
     box-shadow:
       0 0 0 1px rgba(212,160,23,0.15),
       0 8px 32px rgba(0,0,0,0.4),
@@ -519,7 +606,6 @@
       inset 0 1px 0 rgba(212,160,23,0.15);
   }
 
-  /* Top shimmer line */
   .host-card::before {
     content: '';
     position: absolute;
@@ -528,7 +614,6 @@
     background: linear-gradient(90deg, transparent, rgba(212,160,23,0.6), transparent);
   }
 
-  /* Bottom gold bar */
   .host-card::after {
     content: '';
     position: absolute;
@@ -538,7 +623,6 @@
     box-shadow: 0 0 10px rgba(212,160,23,0.4);
   }
 
-  /* Corner glow */
   .host-card-glow {
     position: absolute;
     top: -40px; right: -40px;
@@ -564,7 +648,6 @@
 
   .host-card:hover .host-bg { opacity: 0.85; transform: scale(1.02); }
 
-  /* Dark gradient — left dark for text, right lets image breathe */
   .host-text-mask {
     position: absolute;
     inset: 0;
@@ -599,7 +682,6 @@
 
   .rushmore {
     border-top: 1px solid rgba(212,160,23,0.12);
-    padding-top: 1.25rem;
     background: rgba(212,160,23,0.03);
     margin: 0 -2.25rem -2.25rem;
     padding: 1.25rem 2.25rem 1.5rem;
@@ -753,22 +835,26 @@
   }
 
   footer p { font-size: 13px; color: var(--text-muted); margin-bottom: 0.25rem; }
-  footer .fine { font-size: 12px; color: rgba(154,149,144,0.35); margin-top: 0.5rem; }
+  footer .fine { font-size: 12px; color: rgba(154,149,144,0.45); margin-top: 0.5rem; }
+
+  /* ── SCROLL FADE-IN ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { opacity: 0; }
+  .fade-up.visible { animation: fadeUp 0.6s ease forwards; }
 
   @media (max-width: 660px) {
     nav { padding: 0 1rem; }
-    .nav-links { gap: 1rem; }
-    .nav-links li:nth-child(1),
-    .nav-links li:nth-child(2),
-    .nav-links li:nth-child(3) { display: none; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
     section { padding: 3.5rem 1rem; }
     .shows-grid, .hosts-grid { grid-template-columns: 1fr; }
     .video-grid { grid-template-columns: 1fr; }
 
-    /* Swap to portrait hero on mobile */
     .hero-image { content: url('w2w-hero-mobile.png'); max-height: none; }
 
-    /* Fade covers bottom of portrait image */
     .hero-fade {
       display: block;
       height: 45%;
@@ -780,13 +866,8 @@
       );
     }
 
-    .hero-content {
-      padding: 0 1.25rem 2rem;
-    }
-    .hero-sub {
-      font-size: 15px;
-      margin-bottom: 1.25rem;
-    }
+    .hero-content { padding: 0 1.25rem 2rem; }
+    .hero-sub { font-size: 15px; margin-bottom: 1.25rem; }
     .hero-ctas { gap: 0.75rem; margin-bottom: 1rem; }
     .btn-primary, .btn-secondary { padding: 12px 22px; font-size: 13px; }
     .ep-badge { font-size: 11px; padding: 4px 10px; }
@@ -794,6 +875,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; animation: none !important; }
+    .fade-up { opacity: 1 !important; }
   }
 </style>
 </head>
@@ -810,7 +892,19 @@
     <li><a href="#hosts">The Boyz</a></li>
     <li><a href="https://www.youtube.com/@Welcome2wrasslin" target="_blank" rel="noopener" class="nav-subscribe">▶ Subscribe</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul>
+    <li><a href="#shows" class="mobile-link">Shows</a></li>
+    <li><a href="#latest" class="mobile-link">Episodes</a></li>
+    <li><a href="#hosts" class="mobile-link">The Boyz</a></li>
+    <li><a href="https://www.youtube.com/@Welcome2wrasslin" target="_blank" rel="noopener" class="mobile-subscribe">▶ Subscribe on YouTube</a></li>
+  </ul>
+</div>
 
 <section class="hero">
   <img src="w2w-hero.png" alt="Welcome 2 Wrasslin" class="hero-image">
@@ -989,6 +1083,9 @@
         </div>
       </div>
     </div>
+    <div class="view-all-wrap">
+      <a href="https://www.youtube.com/@Welcome2wrasslin" target="_blank" rel="noopener" class="btn-secondary">Watch More Marietta Legends ↗</a>
+    </div>
   </div>
 </section>
 
@@ -1065,8 +1162,48 @@
     <img src="w2w-logo.png" alt="Welcome 2 Wrasslin logo">
   </div>
   <p>Presented by Dem Wrasslin Boyz · Marietta, Georgia</p>
-  <p class="fine">Built for the love of wrasslin</p>
+  <p class="fine">© <span id="year"></span> Welcome 2 Wrasslin · Built for the love of wrasslin</p>
 </footer>
+
+<script>
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Hamburger menu
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  // Scroll fade-in
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.section-inner, .origin-inner, .follow-inner').forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+  }
+</script>
 
 </body>
 </html>
