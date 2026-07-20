@@ -14,8 +14,38 @@
 <meta name="twitter:title" content="Welcome 2 Wrasslin — The Podcast">
 <meta name="twitter:description" content="Two lifelong wrestling fans, one podcast. New episodes multiple times a week.">
 <meta name="twitter:image" content="w2w-hero.png">
-<link rel="icon" type="image/png" href="w2w-logo.png">
-<link rel="apple-touch-icon" href="w2w-logo.png">
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicons/favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicons/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<!-- Apple -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="167x167" href="favicons/apple-touch-icon-167x167.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="68x68" href="favicons/apple-touch-icon-68x68.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+<!-- Android / Samsung -->
+<link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
+<link rel="manifest" href="favicons/site.webmanifest">
+<!-- Microsoft / Windows -->
+<meta name="msapplication-TileImage" content="favicons/mstile-150x150.png">
+<meta name="msapplication-TileColor" content="#0A0A0A">
+<meta name="msapplication-config" content="favicons/browserconfig.xml">
+<!-- PWA -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Welcome 2 Wrasslin">
+<meta name="application-name" content="Welcome 2 Wrasslin">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -947,17 +977,17 @@
 
 <hr class="gold-divider">
 
-<!-- LATEST EPISODES — real video IDs -->
+<!-- LATEST EPISODES — auto-synced from YouTube via episodes.json + GitHub Action -->
 <section id="latest">
   <div class="section-inner">
     <div class="section-label">Fresh Off the Mic</div>
     <h2 class="section-title">Latest Episodes</h2>
     <p class="section-desc">New episodes drop multiple times a week. Catch up on the most recent ones right here.</p>
-    <div class="video-grid">
-
+    <div class="video-grid" id="latest-episodes" aria-live="polite">
+      <!-- Populated from episodes.json; fallback cards below until JS runs -->
       <div class="video-card">
         <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed/Q9gv8oa4WCc"
+          <iframe src="https://www.youtube.com/embed/sQsjDMdkeac"
             title="Latest Episode"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -965,13 +995,12 @@
         </div>
         <div class="video-info">
           <div class="video-ep">Latest Episode</div>
-          <div class="video-title">Newest Drop from Dem Wrasslin Boyz</div>
+          <div class="video-title">Welcome 2 Wrasslin the PODCAST ep#84 WWE's Saturday Nights Main Event review</div>
         </div>
       </div>
-
       <div class="video-card">
         <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed/K_SbmMOI42s"
+          <iframe src="https://www.youtube.com/embed/rDdur-TGAV8"
             title="Recent Episode"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -979,13 +1008,12 @@
         </div>
         <div class="video-info">
           <div class="video-ep">Recent Episode</div>
-          <div class="video-title">Welcome 2 Wrasslin Podcast</div>
+          <div class="video-title">Welcome 2 Wrasslin the PODCAST ep# 83 preview of WWE's Saturday Nights Main Event</div>
         </div>
       </div>
-
       <div class="video-card">
         <div class="video-thumb-wrap">
-          <iframe src="https://www.youtube.com/embed/8b02RkQ6LpI"
+          <iframe src="https://www.youtube.com/embed/TN1YfRCEDIc"
             title="Recent Episode"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -993,10 +1021,9 @@
         </div>
         <div class="video-info">
           <div class="video-ep">Recent Episode</div>
-          <div class="video-title">Welcome 2 Wrasslin Podcast</div>
+          <div class="video-title">Welcome 2 Wrasslin the PODCAST ep82 4th of JULY episode</div>
         </div>
       </div>
-
     </div>
     <div class="view-all-wrap">
       <a href="https://www.youtube.com/@Welcome2wrasslin" target="_blank" rel="noopener" class="btn-primary">View All Episodes on YouTube ↗</a>
@@ -1186,6 +1213,60 @@
       mobileMenu.setAttribute('aria-hidden', 'true');
     });
   });
+
+  // Latest Episodes — loaded from episodes.json (synced by GitHub Action from YouTube RSS)
+  (function loadLatestEpisodes() {
+    const grid = document.getElementById('latest-episodes');
+    if (!grid) return;
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function labelFor(index) {
+      return index === 0 ? 'Latest Episode' : 'Recent Episode';
+    }
+
+    function render(episodes) {
+      if (!Array.isArray(episodes) || episodes.length === 0) return;
+      grid.innerHTML = episodes.map((ep, i) => {
+        const id = escapeHtml(ep.videoId);
+        const title = escapeHtml(ep.title || 'Welcome 2 Wrasslin Podcast');
+        const label = labelFor(i);
+        return (
+          '<div class="video-card">' +
+            '<div class="video-thumb-wrap">' +
+              '<iframe src="https://www.youtube.com/embed/' + id + '"' +
+                ' title="' + title + '"' +
+                ' loading="lazy"' +
+                ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"' +
+                ' allowfullscreen></iframe>' +
+            '</div>' +
+            '<div class="video-info">' +
+              '<div class="video-ep">' + label + '</div>' +
+              '<div class="video-title">' + title + '</div>' +
+            '</div>' +
+          '</div>'
+        );
+      }).join('');
+    }
+
+    fetch('episodes.json', { cache: 'no-cache' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('episodes.json ' + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        render(data.episodes);
+      })
+      .catch(function () {
+        // Keep the static fallback cards already in the HTML
+      });
+  })();
 
   // Scroll fade-in
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

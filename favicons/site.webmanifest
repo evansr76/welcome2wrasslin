@@ -1,0 +1,23 @@
+{
+  "name": "Welcome 2 Wrasslin",
+  "short_name": "W2W",
+  "description": "Two lifelong wrestling fans, one podcast.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0A0A0A",
+  "background_color": "#0A0A0A",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
