@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-08-03T06:18:48.024Z",
+  "updatedAt": "2026-08-10T05:23:19.599Z",
   "channelId": "UCGINH-DM9Psuj0aTRsFhJZg",
   "channelUrl": "https://www.youtube.com/@Welcome2wrasslin",
   "episodes": [
+    {
+      "videoId": "0i4SngVcfP0",
+      "title": "Welcome 2 Wrasslin the podcast ep# 87",
+      "published": "2026-08-10T05:17:33+00:00",
+      "url": "https://www.youtube.com/watch?v=0i4SngVcfP0"
+    },
     {
       "videoId": "BvF6PtySi2w",
       "title": "Welcome 2 Wrasslin the PODCAST ep 86 Summer  Slam Review",
@@ -14,12 +20,6 @@
       "title": "Welcome 2 Wrasslin the PODCAST ep 85 WWE Summer Slam Preview",
       "published": "2026-07-31T04:26:21+00:00",
       "url": "https://www.youtube.com/watch?v=kfDTTDLJKP4"
-    },
-    {
-      "videoId": "sQsjDMdkeac",
-      "title": "Welcome 2 Wrasslin the PODCAST ep#84 WWE's Saturday Nights Main Event review",
-      "published": "2026-07-20T05:34:24+00:00",
-      "url": "https://www.youtube.com/watch?v=sQsjDMdkeac"
     }
   ]
 }
