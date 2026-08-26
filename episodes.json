@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-08-18T07:34:36.020Z",
+  "updatedAt": "2026-08-26T07:42:08.299Z",
   "channelId": "UCGINH-DM9Psuj0aTRsFhJZg",
   "channelUrl": "https://www.youtube.com/@Welcome2wrasslin",
   "episodes": [
+    {
+      "videoId": "LJ0hj53SdH4",
+      "title": "Welcome 2 Wrasslin the podcast ep 89 \"jumpin ship\"",
+      "published": "2026-08-26T03:30:09+00:00",
+      "url": "https://www.youtube.com/watch?v=LJ0hj53SdH4"
+    },
     {
       "videoId": "M8Kj0m1H9lU",
       "title": "Welcome 2 Wrasslin the PODCAST ep 88 Talknshop newtwork debut.",
@@ -14,12 +20,6 @@
       "title": "Welcome 2 Wrasslin the podcast ep# 87",
       "published": "2026-08-10T05:17:33+00:00",
       "url": "https://www.youtube.com/watch?v=0i4SngVcfP0"
-    },
-    {
-      "videoId": "BvF6PtySi2w",
-      "title": "Welcome 2 Wrasslin the PODCAST ep 86 Summer  Slam Review",
-      "published": "2026-08-03T05:33:18+00:00",
-      "url": "https://www.youtube.com/watch?v=BvF6PtySi2w"
     }
   ]
 }
