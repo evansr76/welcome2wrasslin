@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-09-08T08:33:27.387Z",
+  "updatedAt": "2026-09-16T07:09:46.160Z",
   "channelId": "UCGINH-DM9Psuj0aTRsFhJZg",
   "channelUrl": "https://www.youtube.com/@Welcome2wrasslin",
   "episodes": [
+    {
+      "videoId": "Md3JsD7fp0E",
+      "title": "w2w ep 92",
+      "published": "2026-09-16T05:00:05+00:00",
+      "url": "https://www.youtube.com/watch?v=Md3JsD7fp0E"
+    },
     {
       "videoId": "6jZbqtxh4jI",
       "title": "Welcome 2 Wrasslin the PODCAST ep # 91 Parts unknown",
@@ -14,12 +20,6 @@
       "title": "Welcome 2 Wrasslin the PODCAST ep 90 Jumpin ship part 2",
       "published": "2026-09-01T04:34:08+00:00",
       "url": "https://www.youtube.com/watch?v=89ieoReNl1k"
-    },
-    {
-      "videoId": "LJ0hj53SdH4",
-      "title": "Welcome 2 Wrasslin the podcast ep 89 \"jumpin ship\"",
-      "published": "2026-08-26T03:30:09+00:00",
-      "url": "https://www.youtube.com/watch?v=LJ0hj53SdH4"
     }
   ]
 }
