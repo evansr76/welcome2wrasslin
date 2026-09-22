@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-09-16T07:09:46.160Z",
+  "updatedAt": "2026-09-22T10:54:24.501Z",
   "channelId": "UCGINH-DM9Psuj0aTRsFhJZg",
   "channelUrl": "https://www.youtube.com/@Welcome2wrasslin",
   "episodes": [
+    {
+      "videoId": "VL7vn2tirtI",
+      "title": "Welcome 2 Wrasslin the podcast ep 93 jobber mania",
+      "published": "2026-09-22T04:34:39+00:00",
+      "url": "https://www.youtube.com/watch?v=VL7vn2tirtI"
+    },
     {
       "videoId": "Md3JsD7fp0E",
       "title": "w2w ep 92",
@@ -14,12 +20,6 @@
       "title": "Welcome 2 Wrasslin the PODCAST ep # 91 Parts unknown",
       "published": "2026-09-08T06:19:53+00:00",
       "url": "https://www.youtube.com/watch?v=6jZbqtxh4jI"
-    },
-    {
-      "videoId": "89ieoReNl1k",
-      "title": "Welcome 2 Wrasslin the PODCAST ep 90 Jumpin ship part 2",
-      "published": "2026-09-01T04:34:08+00:00",
-      "url": "https://www.youtube.com/watch?v=89ieoReNl1k"
     }
   ]
 }
