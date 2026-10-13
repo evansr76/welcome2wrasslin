@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-10-06T11:44:45.404Z",
+  "updatedAt": "2026-10-13T13:29:17.716Z",
   "channelId": "UCGINH-DM9Psuj0aTRsFhJZg",
   "channelUrl": "https://www.youtube.com/@Welcome2wrasslin",
   "episodes": [
+    {
+      "videoId": "2FBeKtSzgGI",
+      "title": "Welcome 2 Wrasslin the PODCAST ep 96 WWE Money in the Bank review",
+      "published": "2026-10-13T04:03:05+00:00",
+      "url": "https://www.youtube.com/watch?v=2FBeKtSzgGI"
+    },
     {
       "videoId": "Tg88g934Cxw",
       "title": "Welcome 2 Wrasslin ep 95 \"yeah\"",
@@ -14,12 +20,6 @@
       "title": "Welcome 2 Wrasslon the PODCAST ep 94  \"a episode for GRANNY\"",
       "published": "2026-09-29T06:12:41+00:00",
       "url": "https://www.youtube.com/watch?v=kTcsv2ydHLQ"
-    },
-    {
-      "videoId": "VL7vn2tirtI",
-      "title": "Welcome 2 Wrasslin the podcast ep 93 jobber mania",
-      "published": "2026-09-22T04:34:39+00:00",
-      "url": "https://www.youtube.com/watch?v=VL7vn2tirtI"
     }
   ]
 }
