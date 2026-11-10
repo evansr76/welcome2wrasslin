@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-11-04T10:24:08.795Z",
+  "updatedAt": "2026-11-10T09:10:23.176Z",
   "channelId": "UCGINH-DM9Psuj0aTRsFhJZg",
   "channelUrl": "https://www.youtube.com/@Welcome2wrasslin",
   "episodes": [
+    {
+      "videoId": "9j4xK6YBYfA",
+      "title": "Welcome 2 Wrasslin the PODCAST ep 100 \"Keepin it 100''",
+      "published": "2026-11-10T06:05:59+00:00",
+      "url": "https://www.youtube.com/watch?v=9j4xK6YBYfA"
+    },
     {
       "videoId": "xq4IHLZKKQI",
       "title": "Welcome 2 Wrasslin the PODCAST ep 99",
@@ -14,12 +20,6 @@
       "title": "Welcome 2 Wrasslin the PODCAST ep 98 \"4th and long\"",
       "published": "2026-10-27T02:59:04+00:00",
       "url": "https://www.youtube.com/watch?v=FObpJOumBX8"
-    },
-    {
-      "videoId": "-svmdKmBwRM",
-      "title": "Welcome 2 Wrasslin the PODCAST ep 97",
-      "published": "2026-10-20T03:17:49+00:00",
-      "url": "https://www.youtube.com/watch?v=-svmdKmBwRM"
     }
   ]
 }
